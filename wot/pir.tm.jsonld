@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1"
+  ],
+  "@type": [
+    "tm:ThingModel"
+  ],
+  "title": "PIR Sensor",
+  "description": "A motion sensor that detects movement.",
+  "version": {
+    "model": "1.0.0",
+    "instance": "1.0.0"
+  },
+  "links": [
+    {
+      "rel": "tm:ThingModel",
+      "href": "https://github.com/bernar0507/Eclipse-Ditto-MQTT-PIR/blob/main/pir/wot/pir.tm.jsonld",
+      "type": "application/tm+json",
+      "instanceName": "PIR Sensor"
+    }
+  ],
+  "tm:optional": [],
+  "properties": {
+    "motion_detected": {
+      "title": "Motion Detected",
+      "description": "Indicates whether motion is detected or not",
+      "type": "boolean",
+      "observable": true,
+      "readOnly": true,
+      "writeOnly": false
+    }
+  },
+  "actions": {},
+  "events": {},
+  "security": "basic_sc",
+  "securityDefinitions": {
+    "basic_sc": {
+      "scheme": "basic"
+    }
+  }
+}
