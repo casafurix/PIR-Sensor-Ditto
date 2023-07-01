@@ -14,7 +14,7 @@
   "links": [
     {
       "rel": "tm:ThingModel",
-      "href": "https://github.com/bernar0507/Eclipse-Ditto-MQTT-PIR/blob/main/pir/wot/pir.tm.jsonld",
+      "href": "https://github.com/casafurix/PIR-Sensor-Ditto/blob/main/wot/pir.tm.jsonld",
       "type": "application/tm+json",
       "instanceName": "PIR Sensor"
     }
