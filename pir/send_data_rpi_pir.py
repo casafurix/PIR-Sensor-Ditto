@@ -10,7 +10,7 @@ THING_ID = "org.Iotp2c:pir_sensor"
 MQTT_TOPIC = f"{THING_ID}/things/twin/commands/modify"
 
 # PIR sensor pin
-PIR_PIN = 14
+PIR_PIN = 12
 
 
 def on_connect(client, userdata, flags, rc):
@@ -54,6 +54,33 @@ def send_data_to_ditto(pir_data):
             }
         }
     }
+
+    # ditto_data = {
+    #     "topic": "org.Iotp2c/pir_sensor/things/twin/commands/modify",
+    #     "path": "/",
+    #     "value": {
+    #         "thingId": "org.Iotp2c:pir_sensor",
+    #         "policyId": "org.Iotp2c:policy",
+    #         "definition": "https://github.com/casafurix/PIR-Sensor-Ditto/blob/main/wot/pir.tm.jsonld",
+    #         "attributes": {
+    #             "motion_detected": pir_data['motion_detected']
+    #         }
+    #     }
+    # }
+
+    # ditto_data = {
+    #     "topic": "org.Iotp2c:pir/things/twin/commands/modify",
+    #     "path": "/",
+    #     "value": {
+    #         "thingId": "org.Iotp2c:pir",
+    #         "policyId": "org.Iotp2c:policy",
+    #         "definition": "https://raw.githubusercontent.com/casafurix/PIR-Sensor-Ditto/main/pir/wot/pir.tm.jsonld",
+    #         "attributes": {
+    #             "pir_status": pir_data['status'],
+    #             "timestamp": pir_data['timestamp']
+    #         }
+    #     }
+    # }
 
     # Convert the dictionary to a JSON string
     ditto_data_str = json.dumps(ditto_data)
