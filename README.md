@@ -212,16 +212,16 @@ ditto_data = {
 
 ```
 
-`topic`: This is the topic to which the message will be published. In this case, the topic is "org.Iotp2c/iwatch/things/twin/commands/modify", which suggests that the message is intended to modify a twin (digital representation) of an iWatch device in an IoT platform.
+`topic`: This is the topic to which the message will be published. In this case, the topic is "org.Iotp2c/pir_sensor/things/twin/commands/modify", which suggests that the message is intended to modify a twin (digital representation) of an iWatch device in an IoT platform.
 
-`path`: This is the path within the twin where the value will be updated. In this case, the path is "/", indicating that the value should be updated at the root level of the iWatch twin.
+`path`: This is the path within the twin where the value will be updated. In this case, the path is "/", indicating that the value should be updated at the root level of the PIR sensor twin.
 
 `value`: This is the data payload that will be updated in the twin.
 
-`thingId`: This is the unique identifier of the iWatch device within the IoT platform. In this example, the thingId is "org.Iotp2c:iwatch".
+`thingId`: This is the unique identifier of the PIR sensor within the IoT platform. In this example, the thingId is "org.Iotp2c:pir_sensor".
 
-`policyId`: This is the identifier of the policy that governs the access control of the iWatch device. In this example, the policyId is "org.Iotp2c:policy".
+`policyId`: This is the identifier of the policy that governs the access control of the PIR sensor. In this example, the policyId is "org.Iotp2c:policy".
 
-`definition`: This is a URI referencing the JSON-LD file that contains the Thing Model for the iWatch device. In this example, the definition is "https://raw.githubusercontent.com/bernar0507/Eclipse-Ditto-MQTT-iWatch/main/iwatch/wot/iwatch.tm.jsonld".
+`definition`: This is a URI referencing the JSON-LD file that contains the Thing Model for the PIR sensor. In this example, the definition is "https://raw.githubusercontent.com/casafurix/PIR-Sensor-Ditto/main/pir/wot/pir.tm.jsonld".
 
-`attributes`: This is a dictionary of key-value pairs that represent metadata about the iWatch device. In this example, the attributes include the heart rate, timestamp, longitude, and latitude data retrieved from the iwatch_data variable.
+`attributes`: This is a dictionary of key-value pairs that represent metadata about the PIR sensor. In this example, the attributes include the "motion_detected" data retrieved from the pir_data variable.
